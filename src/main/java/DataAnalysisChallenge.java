@@ -33,7 +33,6 @@ public class DataAnalysisChallenge {
         LinkedList<Integer> linkedList;
         Map<int[], Integer> map = new HashMap<int[], Integer>();
         for (int i = 0; i < testArray.length; i++) {//10000
-//            System.out.println("i: " + i);
             arrayListOfLinkedLists  = new ArrayList<LinkedList>();
             linkedList = new LinkedList<Integer>();
             for (int j = 0; j < trainArray.length; j++) {//500
@@ -52,16 +51,6 @@ public class DataAnalysisChallenge {
 //                        map.put(trainArray[j],same);
 
                     }
-                    //find highest same
-                    //if there is a list of them
-                    //compare the occurrences of 1's and 2's
-                    //
-//                    if (trainArray[j][positionOfMissingValue]==1) {
-//
-//                        //countOne++
-//                    } else if (trainArray[j][k]==positionOfMissingValue) {
-//
-//                    }
                 }
                 linkedList.add(j);
                 linkedList.add(same);
@@ -74,9 +63,7 @@ public class DataAnalysisChallenge {
             int highestSame = 0;
             //find the highest among the 500
             for (int row = 0; row < arrayListOfLinkedLists.size(); row++) {
-//                System.out.println("k: " + k + "column: " + column);
                     highestSame = Integer.parseInt(arrayListOfLinkedLists.get(0).get(1).toString());
-//                System.out.println("highestSame: " + highestSame);
                 if (Integer.parseInt(arrayListOfLinkedLists.get(row).get(1).toString()) > highestSame) {
                     highestSame = (Integer.parseInt(arrayListOfLinkedLists.get(row).get(1).toString()));
                 }
@@ -95,24 +82,36 @@ public class DataAnalysisChallenge {
                     testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
                 } else if (countOne < countTwo) {
                     testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
-                } else {
-                    testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
+                } else if (countOne == countTwo) {
+//                    /*this block was added to count the number of ones and twos appear in the same row
+//                    but it has no effect on the score
+//                    int numberOfOnesInARow = 0;
+//                    int numberOfTwosInARow = 0;
+//                    for (int column = 0; column < 14; column++) {
+//                        if (testArray[i][0] == 1) {
+//                            numberOfOnesInARow++;
+//                        } else {
+//                            numberOfTwosInARow++;
+//                        }
+//                        if (numberOfOnesInARow > numberOfTwosInARow) {
+//                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
+//                        } else if (numberOfOnesInARow < numberOfTwosInARow) {
+//                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
+//                        } else {
+//                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
+//                        }
+//                    }*/
+//                  setting one or two has not effect on the score
+                    testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
                 }
             }
-
-//            System.out.println("countOne: " + countOne);
-//            System.out.println("countTwo: " + countTwo);
         }
-//        System.out.println(map.entrySet());
-//        System.out.println(map.size());
-//        System.out.println("arrayListOfLinkedLists.size " + arrayListOfLinkedLists.size());
         for(int i = 0; i<10000; i++)
         {
             for(int j = 0; j<14; j++)
             {
                 System.out.print(testArray[i][j] + " ");
             }
-            if (i!=9999)
             System.out.println();
         }
     }
