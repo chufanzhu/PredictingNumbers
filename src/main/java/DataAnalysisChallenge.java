@@ -29,17 +29,15 @@ public class DataAnalysisChallenge {
         int positionOfMissingValue;
         int valueInMissingPosition;
 //        List<Integer> listOfValuesInMissingPosition = new ArrayList<Integer>();
-        List<LinkedList> arrayListOfLinkedLists = new ArrayList<LinkedList>();
+        List<LinkedList> arrayListOfLinkedLists;
         LinkedList<Integer> linkedList;
-        Map<int[], Integer> map = new HashMap<int[], Integer>();
         for (int i = 0; i < testArray.length; i++) {//10000
             arrayListOfLinkedLists  = new ArrayList<LinkedList>();
-            linkedList = new LinkedList<Integer>();
             for (int j = 0; j < trainArray.length; j++) {//500
+                linkedList = new LinkedList<Integer>();
                 same = 0;
                 positionOfMissingValue = 0;
                 valueInMissingPosition = 0;
-                //map = new HashMap<int[], Integer>();
                 for (int k = 0; k < 14; k++) {
                     if (testArray[i][k]==0) {
                         //record k
@@ -48,8 +46,6 @@ public class DataAnalysisChallenge {
 //                        listOfValuesInMissingPosition.add(valueInMissingPosition);
                     } else if ((testArray[i][k]!=0) && (testArray[i][k]==trainArray[j][k])) {
                         same++;
-//                        map.put(trainArray[j],same);
-
                     }
                 }
                 linkedList.add(j);
@@ -83,26 +79,24 @@ public class DataAnalysisChallenge {
                 } else if (countOne < countTwo) {
                     testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
                 } else if (countOne == countTwo) {
-//                    /*this block was added to count the number of ones and twos appear in the same row
-//                    but it has no effect on the score
-//                    int numberOfOnesInARow = 0;
-//                    int numberOfTwosInARow = 0;
-//                    for (int column = 0; column < 14; column++) {
-//                        if (testArray[i][0] == 1) {
-//                            numberOfOnesInARow++;
-//                        } else {
-//                            numberOfTwosInARow++;
-//                        }
-//                        if (numberOfOnesInARow > numberOfTwosInARow) {
-//                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
-//                        } else if (numberOfOnesInARow < numberOfTwosInARow) {
-//                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
-//                        } else {
-//                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
-//                        }
-//                    }*/
+                    int numberOfOnesInARow = 0;
+                    int numberOfTwosInARow = 0;
+                    for (int column = 0; column < 14; column++) {
+                        if (testArray[i][column] == 1) {
+                            numberOfOnesInARow++;
+                        } else {
+                            numberOfTwosInARow++;
+                        }
+                        if (numberOfOnesInARow > numberOfTwosInARow) {
+                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
+                        } else if (numberOfOnesInARow < numberOfTwosInARow) {
+                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
+                        } else {
+                            testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 1;
+                        }
+                    }
 //                  setting one or two has not effect on the score
-                    testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
+//                    testArray[i][Integer.parseInt(arrayListOfLinkedLists.get(row).get(3).toString())] = 2;
                 }
             }
         }
