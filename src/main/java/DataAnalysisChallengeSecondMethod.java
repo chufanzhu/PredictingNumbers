@@ -7,7 +7,6 @@ public class DataAnalysisChallengeSecondMethod {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("train.txt"));
         scanner.useDelimiter(" *\\n*");
-        int ntrain = 500;
         int trainArray[][] = new int[500][14];
         for(int row=0; scanner.hasNext() && row<500; row++) {
             for(int column=0; column<14; column++)
@@ -45,10 +44,6 @@ public class DataAnalysisChallengeSecondMethod {
         }
         scanner.close();
 
-        int same;
-        int positionOfMissingValue;
-        int valueInMissingPosition;
-
         int oneCount;
         int twoCount;
 
@@ -58,8 +53,6 @@ public class DataAnalysisChallengeSecondMethod {
             for (int j = 0; j < trainArray.length; j++) {//500
                 for (int k = 0; k < 14; k++) {
                     if (testArray[i][k]==0) {
-                        //record k
-//                        positionOfMissingValue = k;
                         oneTestArray[i][k] = 1;
                         twoTestArray[i][k] = 2;
                         break;
@@ -77,11 +70,11 @@ public class DataAnalysisChallengeSecondMethod {
             } else if (oneCount < twoCount) {
                 testArray[i] = twoTestArray[i];
             } else {
-                testArray[i] = oneTestArray[i];
+                testArray[i] = twoTestArray[i];
             }
         }
 
-        for(int i = 0; i<10000; i++)
+        for(int i = 0; i<testArray.length; i++)
         {
             for(int j = 0; j<14; j++)
             {
@@ -89,25 +82,5 @@ public class DataAnalysisChallengeSecondMethod {
             }
             System.out.println();
         }
-
-//        for (int i = 0; i < testArray.length; i++) {//10000
-//                for (int k = 0; k < 14; k++) {
-//                    if (testArray[i][k]==0) {
-//                        //record k
-//                        positionOfMissingValue = k;
-//                        trainArray[i][k] = 1;
-//                    }
-//                }
-//        }
-
-//        for (int i = 0; i < testArray.length; i++) {//10000
-//            for (int j = 0; j < 500; j++) {
-//
-//                    if (Arrays.equals(testArray[i],trainArray[j])) {
-//
-//                    }
-//
-//            }
-//        }
     }
 }
