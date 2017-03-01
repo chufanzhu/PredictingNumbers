@@ -35,5 +35,6 @@ public class example {
             System.out.println("");
         }
         scanner.close();
+        //comment
     }
 }
