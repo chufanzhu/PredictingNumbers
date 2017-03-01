@@ -34,6 +34,7 @@ public class example {
             }
             System.out.println("");
         }
+        //another comment
         scanner.close();
         //comment
         //comment
