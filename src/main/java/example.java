@@ -39,5 +39,6 @@ public class example {
         //comment
         //comment
         //comment
+        //comment
     }
 }
