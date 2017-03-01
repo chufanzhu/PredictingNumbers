@@ -42,8 +42,8 @@
       <file leaf-file-name="example.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/example.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+            <state relative-caret-position="417">
+              <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -613,7 +613,7 @@
       <workItem from="1481735814353" duration="22090000" />
       <workItem from="1481833739944" duration="23351000" />
       <workItem from="1488398932515" duration="71000" />
-      <workItem from="1488400406273" duration="363000" />
+      <workItem from="1488400406273" duration="471000" />
     </task>
     <task id="LOCAL-00001" summary="First output">
       <created>1481833572705</created>
@@ -657,11 +657,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488400479827</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="third test commit">
+      <created>1488400792461</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1488400792462</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50641000" />
+    <option name="totallyTimeSpent" value="50749000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -720,7 +727,8 @@
     <MESSAGE value="Tried another method and this gives me RMSE 0.30463 and hamming 0.0928" />
     <MESSAGE value="Tidying up second method" />
     <MESSAGE value="second test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second test commit" />
+    <MESSAGE value="third test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third test commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -937,8 +945,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/example.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        <state relative-caret-position="417">
+          <caret line="40" column="17" lean-forward="false" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
