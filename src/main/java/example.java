@@ -36,7 +36,7 @@ public class example {
         }
         //another comment
         scanner.close();
-        //comment
+        //commenttttt
         //comment
         //comment
         //comment
