@@ -34,9 +34,8 @@ public class example {
             }
             System.out.println("");
         }
-        //another comment
         scanner.close();
-        //commenttttt
+        //commentFromMacPro
         //comment
         //comment
         //comment
