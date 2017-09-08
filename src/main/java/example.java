@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class example {
-
+//comment
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("train.txt"));
         scanner.useDelimiter(" *\\n*");
