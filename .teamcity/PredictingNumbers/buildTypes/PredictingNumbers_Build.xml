@@ -14,7 +14,7 @@
           <param name="userSettingsSelection" value="userSettingsSelection:default" />
         </parameters>
       </runner>
-      <runner id="RUNNER_4" name="hello world" type="simpleRunner">
+      <runner id="RUNNER_4" name="hello world hello" type="simpleRunner">
         <parameters>
           <param name="script.content" value="echo &quot;hello world&quot;" />
           <param name="teamcity.step.mode" value="default" />
