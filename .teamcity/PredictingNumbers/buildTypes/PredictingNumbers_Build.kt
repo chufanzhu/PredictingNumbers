@@ -28,7 +28,7 @@ object PredictingNumbers_Build : BuildType({
         }
         script {
             name = "hello world hello"
-            scriptContent = """echo "hello world""""
+            scriptContent = """echo "hello world from kotlin""""
         }
     }
 
